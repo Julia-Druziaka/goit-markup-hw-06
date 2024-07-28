@@ -557,12 +557,6 @@ button {
 }
 
 .title-section {
-  width: 288px;
-
-  padding-right: 16px;
-  padding-left: 16px;
-  margin: 0 auto;
-  padding: 96px 0;
 }
 
 .visually-hidden {
@@ -613,14 +607,11 @@ button {
 
 @media screen and (min-width: 768px) {
   .title-section {
-    width: 736px;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding: 96px;
     margin: 0 auto;
   }
 
   .title-list {
+    width: 736px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -705,10 +696,10 @@ button {
 
 .team-section {
   background-color: #f4f4fd;
-  width: 320px;
 }
 
 .team {
+  width: 320px;
   font-weight: 700;
   font-size: 36px;
   line-height: 111%;
