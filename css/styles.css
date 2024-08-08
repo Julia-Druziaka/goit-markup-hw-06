@@ -355,14 +355,13 @@ button {
 }
 
 .page-section {
-  height: 432px;
   background-color: #2e2f42;
   padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/dark-bg-mob-@1x.jpg);
+    url("../images/dark-bg-mob-@1x.jpg");
   max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
@@ -410,7 +409,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/dark-bg-mob-@2x.jpg);
+      url("../images/dark-bg-mob-@2x.jpg");
   }
 }
 
@@ -421,12 +420,12 @@ button {
 
   .page-section {
     max-width: 768px;
-    height: 436px;
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/dark-bg-tab-@1x.jpg);
+      url("../images/dark-bg-tab-@1x.jpg");
   }
 }
 
@@ -438,7 +437,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/dark-bg-tab-@2x.jpg);
+      url("../images/dark-bg-tab-@2x.jpg");
   }
 }
 
@@ -493,7 +492,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office-1desc-@1x.jpg);
+      url("../images/dark-bg-1desc-@1x.jpg");
     max-width: 1440px;
     background-repeat: no-repeat;
     background-position: center;
@@ -503,7 +502,7 @@ button {
   }
 }
 
-@media (min-devivice-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .page-section {
@@ -511,7 +510,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office-1desc-@2x.jpg);
+      url("../images/dark-bg-1desc-@2x.jpg");
   }
 
   .typog {
@@ -698,7 +697,6 @@ button {
 
 .team-section {
   padding: 96px 0;
-  height: 2232px;
   background-color: #f4f4fd;
 }
 
@@ -715,7 +713,6 @@ button {
 
 .photo-team {
   width: 264px;
-  height: 1928px;
   margin: 28px 0;
   display: flex;
   flex-wrap: wrap;
@@ -803,7 +800,6 @@ button {
   .team-section {
     padding: 96px 0;
     width: 768px;
-    height: 1224px;
     background-color: #f4f4fd;
   }
 
@@ -819,7 +815,7 @@ button {
 
   .photo-team {
     width: 584px;
-    height: 428px;
+
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -828,6 +824,8 @@ button {
   }
 
   .team-li {
+    width: 264px;
+    height: 428px;
     border-radius: 0 0 4px 4px;
     width: calc((100% - 24px) / 2);
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -851,7 +849,7 @@ button {
 @media screen and (min-width: 1158px) {
   .team-section {
     width: 1158px;
-    height: 780px;
+
     background-color: #f4f4fd;
     padding: 120px 0;
     margin: 0 auto;
@@ -871,7 +869,7 @@ button {
 
   .photo-team {
     width: 1128px;
-    height: 428px;
+
     display: flex;
     gap: 24px;
   }
@@ -952,5 +950,35 @@ button {
   .media-link:hover,
   .media-link:focus {
     background-color: #404bbf;
+  }
+}
+
+.photo-eazy {
+  height: 2752px;
+  padding: 96px 0;
+}
+
+.oury {
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  background-color: #ffffff;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
   }
 }
