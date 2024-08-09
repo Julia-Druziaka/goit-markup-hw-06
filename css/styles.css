@@ -37,7 +37,7 @@ img {
   margin: 0 auto;
 }
 
-visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -361,13 +361,25 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/dark-bg-mob-@1x.jpg");
+    url("../images/dark-bg-1mob-@1x.jpg");
   max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .page-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/dark-bg-1mob-@2x.jpg");
+  }
 }
 
 .typog {
@@ -401,18 +413,6 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .page-section {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url("../images/dark-bg-mob-@2x.jpg");
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -425,7 +425,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bg-tab-@1x.jpg");
+      url("../images/dark-bg-2tab-@1x.jpg");
   }
 }
 
@@ -437,7 +437,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bg-tab-@2x.jpg");
+      url("../images/dark-bg-2tab-@2x.jpg");
   }
 }
 
@@ -492,7 +492,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bg-1desc-@1x.jpg");
+      url("../images/dark-bg-3desc-@1x.jpg");
     max-width: 1440px;
     background-repeat: no-repeat;
     background-position: center;
@@ -510,7 +510,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bg-1desc-@2x.jpg");
+      url("../images/dark-bg-3desc-@2x.jpg");
   }
 
   .typog {
@@ -953,8 +953,12 @@ button {
   }
 }
 
+.overlay {
+  display: none;
+}
+
 .photo-eazy {
-  height: 2752px;
+  width: 288px;
   padding: 96px 0;
 }
 
@@ -970,9 +974,101 @@ button {
   text-transform: capitalize;
 }
 
+.photo-one {
+  width: 288px;
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+.photo-two {
+  background: url("path_to_image");
+}
+
+.photo-two:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.three {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-name {
+  padding: 32px 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
+  width: 288px;
+  height: 120px;
+}
+
+.conty {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.taxty {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .photo-eazy {
+    width: 736px;
+  }
+  .photo-one {
+    width: 736px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 24px;
+    margin: 0 auto;
+  }
+
+  .photo-two {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .photo-two:hover .overlay {
+    transform: translateY(0%);
+  }
+
+  .three {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .photo-name {
+    width: 356px;
   }
 }
 
@@ -980,5 +1076,30 @@ button {
   .container {
     max-width: 1158px;
     padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .photo-eazy {
+    width: 1128px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+  }
+
+  .oury {
+    margin-bottom: 72px;
+  }
+
+  .photo-one {
+    width: 1128px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  .photo-two {
+    width: calc((100% - 48px) / 3);
   }
 }
